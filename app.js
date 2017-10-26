@@ -20,14 +20,18 @@ function ansPizza() {
 ansPizza();
 
 // guess if I liked guardians of the galaxy
-const likesGuardians = prompt(username + ' did I enjoy watching Guardians of the Galaxy?'); // Likes Guardians of the Galaxy?
-console.log('Question: Liked Guardians of the Galaxy? User answered: ' + likesGuardians);
-if(likesGuardians.toLowerCase() === 'yes' || likesGuardians.toLowerCase() === 'y'){
-    alert('Correct! That movie was awesome.');
-    score++;
-}else{
-    alert('Wrong. How could you NOT like that movie?');
+function ansGuardians() {
+    const likesGuardians = prompt(username + ' did I enjoy watching Guardians of the Galaxy?'); // Likes Guardians of the Galaxy?
+    console.log('Question: Liked Guardians of the Galaxy? User answered: ' + likesGuardians);
+    if(likesGuardians.toLowerCase() === 'yes' || likesGuardians.toLowerCase() === 'y'){
+        alert('Correct! That movie was awesome.');
+        score++;
+    }else{
+        alert('Wrong. How could you NOT like that movie?');
+    }
 }
+ansGuardians();
+
 //guess if I liked guardians 2
 const likesGuardiansSequel = prompt(username + ' what about the sequel Guardians 2? Did I like that movie?');
 console.log('Question: Did I like the sequel of Guardians of the Galaxy? User answered: ' + likesGuardiansSequel);

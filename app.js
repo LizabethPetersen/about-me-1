@@ -5,15 +5,20 @@ console.log('User said their name was: ' + username);
 alert('Hello ' + username + '!');
 let score = 0;
 alert(username + ' I am going to ask you a series of yes or no questions. Type yes, no, y or n in the field with no punctuation to submit your answer. Upper or lower case should not matter.');
+
 // do I like pizza?
-const likesPizza = prompt(username + ' do I like pizza?'); // Likes pizza?
-console.log('Question: likes pizza? User answered: ' + likesPizza);
-if(likesPizza.toLowerCase() === 'yes' || likesPizza.toLowerCase() === 'y'){
-    alert('Correct! I do like pizza.');
-    score++;
-} else{
-    alert('Wrong... who doesn\'t like pizza..?');
+function ansPizza() {
+    const likesPizza = prompt(username + ' do I like pizza?'); // Likes pizza?
+    console.log('Question: likes pizza? User answered: ' + likesPizza);
+    if(likesPizza.toLowerCase() === 'yes' || likesPizza.toLowerCase() === 'y'){
+        alert('Correct! I do like pizza.');
+        score++;
+    } else{
+        alert('Wrong... who doesn\'t like pizza..?');
+    }
 }
+ansPizza();
+
 // guess if I liked guardians of the galaxy
 const likesGuardians = prompt(username + ' did I enjoy watching Guardians of the Galaxy?'); // Likes Guardians of the Galaxy?
 console.log('Question: Liked Guardians of the Galaxy? User answered: ' + likesGuardians);

@@ -4,43 +4,47 @@ const username = prompt('What\'s your name?');
 console.log('User said their name was: ' + username);
 alert('Hello ' + username + '!');
 let score = 0;
-alert(username + ' I am going to ask you a series of yes or no questions. Type yes, no, y or n in the field with no punctuation to submit your answer. Upper or lower case should not matter.');
-
-// do I like pizza?
-function ansPizza() {
-    const likesPizza = prompt(username + ' do I like pizza?'); // Likes pizza?
-    console.log('Question: likes pizza? User answered: ' + likesPizza);
-    if(likesPizza.toLowerCase() === 'yes' || likesPizza.toLowerCase() === 'y'){
-        alert('Correct! I do like pizza.');
-        score++;
-    } else{
-        alert('Wrong... who doesn\'t like pizza..?');
-    }
-}
-ansPizza();
-
-// guess if I liked guardians of the galaxy
-function ansGuardians() {
-    const likesGuardians = prompt(username + ' did I enjoy watching Guardians of the Galaxy?'); // Likes Guardians of the Galaxy?
-    console.log('Question: Liked Guardians of the Galaxy? User answered: ' + likesGuardians);
-    if(likesGuardians.toLowerCase() === 'yes' || likesGuardians.toLowerCase() === 'y'){
-        alert('Correct! That movie was awesome.');
+alert(username + ' I am going to ask you a series of yes or no questions. Type yes, no, y or n in the field //with no punctuation to submit your answer. Upper or lower case should not matter.');
+//
+//// do I like pizza?
+//function ansPizza() {
+//    const likesPizza = prompt(username + ' do I like pizza?'); // Likes pizza?
+//    console.log('Question: likes pizza? User answered: ' + likesPizza);
+//    if(likesPizza.toLowerCase() === 'yes' || likesPizza.toLowerCase() === 'y'){
+//        alert('Correct! I do like pizza.');
+//        score++;
+//    } else{
+//        alert('Wrong... who doesn\'t like pizza..?');
+//    }
+//}
+//ansPizza();
+//
+//// guess if I liked guardians of the galaxy
+//function ansGuardians() {
+//    const likesGuardians = prompt(username + ' did I enjoy watching Guardians of the Galaxy?'); // Likes //Guardians of the Galaxy?
+//    console.log('Question: Liked Guardians of the Galaxy? User answered: ' + likesGuardians);
+//    if(likesGuardians.toLowerCase() === 'yes' || likesGuardians.toLowerCase() === 'y'){
+//        alert('Correct! That movie was awesome.');
+//        score++;
+//    }else{
+//        alert('Wrong. How could you NOT like that movie?');
+//    }
+//}
+//ansGuardians()
+//
+//guess if I liked guardians 2
+function ansGuardiansTwo() {
+    const likesGuardiansSequel = prompt(username + ' what about the sequel Guardians 2? Did I like that movie?');
+    console.log('Question: Did I like the sequel of Guardians of the Galaxy? User answered: ' + likesGuardiansSequel);
+    if(likesGuardiansSequel.toLowerCase() === 'yes' || likesGuardiansSequel.toLowerCase() === 'y'){
+        alert('Correct! Best sequel in years!');
         score++;
     }else{
-        alert('Wrong. How could you NOT like that movie?');
+        alert('Wrong. Of course I liked the sequel! Best sequel in years imho...');
     }
 }
-ansGuardians();
+ansGuardiansTwo();
 
-//guess if I liked guardians 2
-const likesGuardiansSequel = prompt(username + ' what about the sequel Guardians 2? Did I like that movie?');
-console.log('Question: Did I like the sequel of Guardians of the Galaxy? User answered: ' + likesGuardiansSequel);
-if(likesGuardiansSequel.toLowerCase() === 'yes' || likesGuardiansSequel.toLowerCase() === 'y'){
-    alert('Correct! Best sequel in years!');
-    score++;
-}else{
-    alert('Wrong. Of course I liked the sequel! Best sequel in years imho...');
-}
 // guess if my favorite food is potatoes
 const favFoodPotatoes = prompt(username + ' would you believe me if I told you potatoes were my favorite food?');
 console.log('Question: Are potatoes my favorite food? User answered: ' + favFoodPotatoes);
@@ -64,13 +68,13 @@ alert(username + ' we are going to play a guessing game. I will think of a numbe
 for(let i = 1; i < 5; i++){
     const guess = prompt(username + ' guess a number between 1 and 10.');
     console.log('Question: Guess a number between 1 and 10? User answered: ' + guess);
-    if(guess === '6'){
+    if (guess === '6'){
         alert('Correct. The answer was 6!');
         score++;
         break;
-    }else if (guess <= 5) {
+    } else if (guess <= 5) {
         alert('Wrong. Too low! Keep guessing! You have used ' + i + ' of 4 of your guesses.');
-    }else if(guess >= 7) {
+    } else if(guess >= 7) {
         alert('Wrong. Too high! Keep guessing! You have used ' + i + ' of 4 of your guesses.');
     }
 }
@@ -87,6 +91,5 @@ for(let i = 1; i < 7; i++){
         alert('Incorrect. ' + i + ' guesses out of 6 have been used!');
     }
 }
-
-// score informs them of their score
+//score informs them of their score
 alert(username + ' you got ' + score + ' out of 7 correct! Good job.');
